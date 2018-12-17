@@ -1,17 +1,16 @@
 import React, { Component } from 'react';
-import User from './User';
 
 import {MyProvider, MyContext} from './MyProvider';
+import * as PageService from './PageService';
 
 
 export default class SingleUser extends Component {
-    componentDidMount() {
-        console.log(`user id is: ${this.props.match.params.id}`);
+  componentDidMount() {
+    const id = this.props.match.params.id
+    PageService.increasePageVisits(+id)
+  }
 
-        // fetch nad this.props.match.params.id
-    }
   render() {
-      console.log(this.props.match);
     return (
       <MyProvider>
         <MyContext.Consumer>
@@ -22,7 +21,14 @@ export default class SingleUser extends Component {
               users
                 .filter((user) => user.id === +this.props.match.params.id)
                 .map((user, index) =>
-                <User key={index} user={user} />
+                // <User key={index} user={user} />
+                  <div key={index}>
+                    <h1>{user.first_name}</h1>
+                    <h5>{user.last_name}</h5>
+                    <img src={user.avatar} />
+                    <p>Jersey number: {user.id}</p>
+                    <span>page visited: {PageService.getPageVisits(+user.id)}</span>
+                  </div>
               )
             }
             </div>
