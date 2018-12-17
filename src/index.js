@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import Add from './Add';
+import App from './components/App';
+import Add from './components/Add';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import SingleUser from './SingleUser';
+import SingleUser from './components/SingleUser';
 
 
 class Root extends Component {

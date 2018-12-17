@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-import {MyProvider, MyContext} from './MyProvider';
-import * as PageService from './PageService';
+import {MyProvider, MyContext} from '../providers/UserProvider';
+import * as PageService from '../services/PageService';
 
 
 export default class SingleUser extends Component {
@@ -25,7 +25,7 @@ export default class SingleUser extends Component {
                   <div key={index}>
                     <h1>{user.first_name}</h1>
                     <h5>{user.last_name}</h5>
-                    <img src={user.avatar} />
+                    <img src={user.avatar} alt="avatar" />
                     <p>Jersey number: {user.id}</p>
                     <span>page visited: {PageService.getPageVisits(+user.id)}</span>
                   </div>

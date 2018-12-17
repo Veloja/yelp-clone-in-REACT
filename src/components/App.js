@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import User from './User';
-import {MyProvider, MyContext} from './MyProvider';
-
-import './App.css';
-
-
+import {MyProvider, MyContext} from '../providers/UserProvider';
 
 class App extends Component {
 
