@@ -5,12 +5,24 @@ import './App.css';
 
 
 class Add extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      firstName: '',
+      lastName: '',
+      number: null
+    }
+  }
 
   render() {
     return (
       <div>
-        HEY ADD ME
-        <Link to='/'>HOME</Link>
+        <Link to='/'>go to > HOME</Link>
+        <h2>add another one page</h2>
+        <input type="text" placeholder="Name" />
+        <input type="text" placeholder="Last Name" />
+        <input type="number" placeholder="Jersey number" />
+        <button>Save</button>
       </div>
     );
   }
