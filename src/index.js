@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import Add from './Add';
-import User from './User';
 import './App.css';
-
-import { BrowserRouter, Route, Link, Switch } from 'react-router-dom'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import SingleUser from './SingleUser';
 
 
